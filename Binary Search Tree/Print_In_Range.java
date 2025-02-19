@@ -44,14 +44,14 @@ public class Print_In_Range {
             printRange(root.right,k1,k2);
         }
         else if(root.data >k2){
-            printRange(root.right,k1,k2);
+            printRange(root.left,k1,k2);
         }
         else{
-            printRange(root.left,k1,k2);
+            printRange(root.right,k1,k2);
         }
     }
     public static void main(String[] args) {
-        int values[] = {8,5,3,1,4,6,10,11,14};
+        int values[] = {9, 4, 18, 1, 6, 17, 19, 3, 5, 7};
         Node root = null;
 
         for(int i=0; i< values.length;i++){
@@ -60,6 +60,6 @@ public class Print_In_Range {
         inorder(root);
         System.out.println();
 
-        printRange(root,5,12);
+        printRange(root,13,23);
     }
 }
